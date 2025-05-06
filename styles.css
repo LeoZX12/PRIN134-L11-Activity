@@ -2,10 +2,17 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   height: 100vh;
   margin: 0;
   background-color: #f0f0f0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+#controls {
+  margin-bottom: 15px;
+  font-size: 18px;
 }
 
 #gameArea {
@@ -14,18 +21,43 @@ body {
   height: 60%;
   border: 2px solid #000;
   background-color: #fff;
+  overflow: hidden;
 }
 
-#target {
+.target {
   position: absolute;
-  width: 50px;
-  height: 50px;
-  background-color: red;
+  width: 60px;
+  height: 60px;
+  background-color: rgb(255, 29, 29);
   border-radius: 50%;
   cursor: pointer;
+  user-select: none;
+  /* transition: top 0.2s ease, left 0.2s ease; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  user-select: none;
+  outline: 3px solid white;
+  box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.7);
 }
 
 #scoreBoard {
   margin-top: 20px;
   font-size: 24px;
+}
+
+input[type="number"] {
+  width: 60px;
+  font-size: 18px;
+  padding: 3px 5px;
+  margin-right: 10px;
+}
+
+button {
+  font-size: 18px;
+  padding: 5px 10px;
+  cursor: pointer;
 }
